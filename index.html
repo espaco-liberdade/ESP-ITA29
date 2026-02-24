@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 30: Simulacro del Examen B1 - Pasaporte Italiano</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.7;
+        }
+        .header-gradient {
+            background: linear-gradient(90deg, #008C45 0%, #F4F5F0 50%, #CD212A 100%);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #e5e7eb;
+            padding: 12px;
+            text-align: left;
+            vertical-align: middle;
+        }
+        th {
+            background-color: #008C45;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+        tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+        .ipa {
+            font-family: monospace;
+            color: #3498db;
+            font-weight: bold;
+        }
+        .pronuncia-guia {
+            font-style: italic;
+            color: #666;
+            font-size: 0.85em;
+            display: block;
+        }
+        .audio-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            color: #3498db;
+            transition: transform 0.2s;
+            padding: 2px;
+            display: inline-flex;
+            align-items: center;
+        }
+        .audio-btn:hover {
+            transform: scale(1.2);
+        }
+        .nota-gramatical, .bloco-cultural {
+            background: #fdfbeA;
+            border-left: 5px solid #008C45;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .nota-dica {
+            background: #fff0f1;
+            border-left: 5px solid #CD212A;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .secao-exercicios {
+            background-color: #f4f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border: 1px solid #d1e3ff;
+        }
+        .gabarito-oculto {
+            background-color: #b21b22;
+            color: #b21b22;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-weight: bold;
+            transition: all 0.3s;
+            cursor: pointer;
+            user-select: none;
+        }
+        .gabarito-oculto:hover {
+            background-color: #fff0f1;
+            color: #b21b22;
+        }
+        .gabarito-section {
+            background-color: #fff8e1;
+            border: 1px solid #ffecb3;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+        .traduccion-pequena {
+            font-size: 0.8em;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- BOTÓN VOLVER -->
+    <div class="max-w-6xl mx-auto mb-6">
+        <a href="https://espaco-liberdade.github.io/ESP-ITA" class="inline-flex items-center text-[#3498db] font-semibold hover:underline">
+            ← Volver al Menú
+        </a>
+    </div>
+
+    <!-- TÍTULO PRINCIPAL -->
+    <header class="max-w-6xl mx-auto mb-10 text-center">
+        <div class="header-gradient p-1 rounded-lg shadow-lg">
+            <div class="bg-white p-6 rounded-md">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 uppercase tracking-tight">
+                    📘 Clase 30: Simulacro del Examen B1 🇮🇹<br>
+                    <span class="text-2xl text-gray-500 font-normal">(Simulazione della Prova B1)</span>
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto space-y-12">
+        
+        <!-- 1. INTRODUCCIÓN -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-bold text-[#005a2c] border-b-2 border-[#CD212A] pb-2 mb-6">1. Introducción</h2>
+            <div class="space-y-4 text-gray-700 leading-relaxed text-justify">
+                <p><em>¡Congratulazioni! <span class="traduccion-pequena">(¡Felicitaciones!)</span></em> Has llegado a la clase final del Módulo 3, el paso decisivo hacia tu ciudadanía. Esta no es una clase común, sino un <strong>simulacro práctico</strong> del Examen B1 de competencia.</p>
+                <p>Vamos a poner a prueba todas las habilidades que has desarrollado hasta ahora. La lección está estructurada para reflejar las cuatro partes del examen oficial: comprensión auditiva (<em>ascolto</em>), lectura (<em>lettura</em>), escritura (<em>scrittura</em>) y oral (<em>orale</em>). El objetivo es familiarizarte con el formato de las preguntas y darte la confianza necesaria para el gran día. Respira hondo y demuestra todo lo que has aprendido. <em>¡Questo è il momento della verità. In bocca al lupo! <span class="traduccion-pequena">(Este es el momento de la verdad. ¡Buena suerte!)</span></em></p>
+            </div>
+        </section>
+
+        <!-- 2. ESTRUCTURA DEL EXAMEN -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-bold text-[#005a2c] border-b-2 border-[#CD212A] pb-2 mb-6 text-center md:text-left">2. Estructura del Examen B1 Ciudadanía</h2>
+            <div class="nota-gramatical">
+                <h4 class="font-bold text-lg mb-4 text-[#005a2c]">💡 Le Quattro Parti dell'Esame (Las Cuatro Partes del Examen)</h4>
+                <p class="mb-4">El examen B1 para la ciudadanía evalúa tu capacidad para usar el italiano en situaciones cotidianas. Se divide en cuatro competencias:</p>
+                <ul class="list-disc list-inside space-y-3 text-sm text-gray-700">
+                    <li><strong>Prova di Ascolto (Comprensión Auditiva):</strong> Escucharás audios cortos (diálogos, anuncios) y deberás responder preguntas de opción múltiple sobre lo que has escuchado.</li>
+                    <li><strong>Prova di Lettura (Comprensión de Lectura):</strong> Leerás textos cortos (correos electrónicos, artículos, anuncios) y responderás preguntas de opción múltiple para demostrar que has entendido la información principal.</li>
+                    <li><strong>Prova di Scrittura (Producción Escrita):</strong> Deberás escribir dos textos cortos. Generalmente, un correo electrónico o un mensaje informal y un texto narrativo/descriptivo sobre un tema familiar (tu familia, tus últimas vacaciones, etc.).</li>
+                    <li><strong>Prova Orale (Producción Oral):</strong> La prueba oral tiene dos partes. En la primera, harás una breve presentación personal. En la segunda, participarás en un diálogo corto con el examinador sobre un tema cotidiano (organizar algo, elegir una opción, etc.).</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 3. PROVA DI ASCOLTO -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-bold text-[#005a2c] border-b-2 border-[#CD212A] pb-2 mb-6 uppercase">3. Prova di Ascolto (Simulazione)</h2>
+            <div class="secao-exercicios">
+                <h4 class="font-bold text-lg mb-4">Instrucciones</h4>
+                <p class="mb-4 text-sm">Lee el siguiente diálogo como si lo estuvieras escuchando. Después, responde a la pregunta de opción múltiple.</p>
+                
+                <div class="bg-white p-4 rounded-lg border border-gray-200 mb-6 italic text-gray-700">
+                    <p class="mb-2 font-bold not-italic">Dialogo al telefono: <button class="audio-btn" onclick="playAudio('Pronto, Marco? Ciao Anna! Dimmi tutto. Senti, volevo chiederti un favore. Sabato prossimo è il compleanno di mia madre e vorrei organizzarle una festa a sorpresa. Mi daresti una mano? Certo! Che bella idea! Di cosa hai bisogno? Allora, io penserò alla torta e alle decorazioni. Tu potresti occuparti delle bevande? Potresti comprare del prosecco e qualche succo di frutta. Va benissimo. E per il regalo, hai già pensato a qualcosa? Sì, le compreremo quel libro di cui ci ha parlato tanto. Io vado a prenderlo venerdì pomeriggio. Perfetto. Allora ci sentiamo venerdì sera per gli ultimi dettagli. A dopo!')">🔊 Escuchar diálogo completo</button></p>
+                    <p class="mb-2"><span class="font-bold">Anna:</span> Pronto, Marco?</p>
+                    <p class="mb-2"><span class="font-bold">Marco:</span> Ciao Anna! Dimmi tutto.</p>
+                    <p class="mb-2"><span class="font-bold">Anna:</span> Senti, volevo chiederti un favore. Sabato prossimo è il compleanno di mia madre e vorrei organizzarle una festa a sorpresa. Mi daresti una mano?</p>
+                    <p class="mb-2"><span class="font-bold">Marco:</span> Certo! Che bella idea! Di cosa hai bisogno?</p>
+                    <p class="mb-2"><span class="font-bold">Anna:</span> Allora, io penserò alla torta e alle decorazioni. Tu potresti occuparti delle bevande? Potresti comprare del prosecco e qualche succo di frutta.</p>
+                    <p class="mb-2"><span class="font-bold">Marco:</span> Va benissimo. E per il regalo, hai già pensato a qualcosa?</p>
+                    <p class="mb-2"><span class="font-bold">Anna:</span> Sì, le compreremo quel libro di cui ci ha parlato tanto. Io vado a prenderlo venerdì pomeriggio.</p>
+                    <p class="mb-2"><span class="font-bold">Marco:</span> Perfetto. Allora ci sentiamo venerdì sera per gli ultimi dettagli. A dopo!</p>
+                </div>
+
+                <h4 class="font-bold mb-2">Domanda (Pregunta):</h4>
+                <p class="mb-2 font-medium">Di cosa si occuperà Marco per la festa?</p>
+                <ol class="list-[upper-alpha] list-inside space-y-2 ml-4">
+                    <li>Della torta e delle decorazioni.</li>
+                    <li>Del regalo per la madre di Anna.</li>
+                    <li>Delle bevande, come il prosecco e i succhi di frutta.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 4. PROVA DI LETTURA -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-bold text-[#005a2c] border-b-2 border-[#CD212A] pb-2 mb-6 uppercase">4. Prova di Lettura (Simulazione)</h2>
+            <p class="mb-4 text-sm"><strong>Instrucciones:</strong> Lee el siguiente correo electrónico y responde a las preguntas de opción múltiple.</p>
+            
+            <div class="bg-gray-50 p-6 rounded-lg border border-gray-300 mb-6 font-mono text-sm">
+                <p><strong>Da:</strong> giulia.rossi@email.it</p>
+                <p><strong>A:</strong> info@appartamentibelli.it</p>
+                <p><strong>Oggetto:</strong> Richiesta informazioni per affitto appartamento</p>
+                <br>
+                <p>Spettabile agenzia,</p>
+                <br>
+                <p>Scrivo in riferimento all'annuncio che ho visto sul vostro sito web per l'appartamento in Via Garibaldi. Sarei molto interessata a ricevere maggiori informazioni.</p>
+                <br>
+                <p>In particolare, vorrei sapere se l'appartamento è ancora disponibile per l'affitto a partire dal prossimo mese. Io e mio marito stiamo cercando una soluzione a lungo termine. L'annuncio dice che ci sono due camere da letto. Sarebbe possibile sapere se sono entrambe matrimoniali? Inoltre, vorrei chiedere se le spese condominiali sono incluse nel prezzo dell'affitto di 800 euro mensili.</p>
+                <br>
+                <p>Sarebbe possibile organizzare una visita la prossima settimana? Noi saremmo liberi martedì pomeriggio dopo le 17:00 oppure giovedì mattina.</p>
+                <br>
+                <p>Ringraziando per l'attenzione, attendo un Vostro gentile riscontro.</p>
+                <br>
+                <p>Cordiali saluti,</p>
+                <p>Giulia Rossi</p>
+            </div>
+
+            <h4 class="font-bold mb-4">Domande (Preguntas):</h4>
+            
+            <div class="mb-6">
+                <p class="font-bold mb-2">1. Qual è lo scopo principale di questa e-mail?</p>
+                <ol class="list-[upper-alpha] list-inside space-y-2 ml-4">
+                    <li>Comprare un appartamento in Via Garibaldi.</li>
+                    <li>Chiedere informazioni e fissare un appuntamento per visitare un appartamento in affitto.</li>
+                    <li>Lamentarsi del prezzo dell'affitto di un appartamento.</li>
+                </ol>
+            </div>
+
+            <div>
+                <p class="font-bold mb-2">2. Quale informazione Giulia NON chiede nell'e-mail?</p>
+                <ol class="list-[upper-alpha] list-inside space-y-2 ml-4">
+                    <li>Se le spese condominiali sono incluse nel prezzo.</li>
+                    <li>Se è possibile avere un posto auto nel garage.</li>
+                    <li>Se entrambe le camere da letto sono matrimoniali.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 5. PROVA DI SCRITTURA -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-bold text-[#005a2c] border-b-2 border-[#CD212A] pb-2 mb-6 uppercase">5. Prova di Scrittura (Simulazione)</h2>
+            <div class="secao-exercicios">
+                <h4 class="font-bold text-lg mb-4">Instrucciones</h4>
+                <p class="mb-4">Completa las dos tareas de escritura siguientes. Intenta usar un vocabulario variado y las estructuras gramaticales que has aprendido (passato prossimo, imperfetto, futuro, condizionale, etc.).</p>
+                
+                <div class="mb-6">
+                    <h5 class="font-bold text-[#008C45] mb-2">Compito 1: E-mail (circa 80-100 parole)</h5>
+                    <p class="mb-2 text-sm">Un amigo italiano, Luca, te ha invitado a pasar el fin de semana en su casa de la playa, pero no puedes ir. Escribe un correo electrónico a Luca en el que:</p>
+                    <ul class="list-disc list-inside text-sm ml-4">
+                        <li>Le agradeces la invitación.</li>
+                        <li>Explicas por qué no puedes ir (inventa un motivo).</li>
+                        <li>Propones otro plan para hacer juntos pronto.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-bold text-[#008C45] mb-2">Compito 2: Testo Narrativo (circa 80-100 parole)</h5>
+                    <p class="mb-2 text-sm">Escribe un pequeño texto sobre tus últimas vacaciones. Describe:</p>
+                    <ul class="list-disc list-inside text-sm ml-4">
+                        <li>A dónde fuiste.</li>
+                        <li>Con quién fuiste.</li>
+                        <li>Qué hiciste y cómo era el lugar.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. PROVA ORALE -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-bold text-[#005a2c] border-b-2 border-[#CD212A] pb-2 mb-6 uppercase">6. Prova Orale (Simulazione)</h2>
+            <div class="secao-exercicios">
+                <h4 class="font-bold text-lg mb-4">Instrucciones</h4>
+                <p class="mb-4 text-sm">Prepárate para hablar sobre los siguientes temas. Intenta hablar durante aproximadamente 1-2 minutos para cada tarea. Grábate y escúchate para corregir la pronunciación y la fluidez.</p>
+
+                <div class="mb-6">
+                    <h5 class="font-bold text-[#008C45] mb-2">Parte 1: Presentazione Personale</h5>
+                    <p class="text-sm mb-2">El examinador dirá: <em>"Buongiorno. Prima di tutto, mi parli un po' di Lei."</em> (Buenos días. Primero, hábleme un poco de usted.)</p>
+                    <p class="text-sm mb-2">Prepara una presentación que incluya:</p>
+                    <ul class="list-disc list-inside text-sm ml-4">
+                        <li>Tu nombre, edad y de dónde eres.</li>
+                        <li>Tu profesión o qué estudias.</li>
+                        <li>Por qué estás estudiando italiano y por qué quieres la ciudadanía.</li>
+                        <li>Algo sobre tus hobbies y tu familia.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-bold text-[#008C45] mb-2">Parte 2: Dialogo</h5>
+                    <p class="text-sm mb-2">Imagina esta situación: Tú y un amigo italiano queréis organizar un viaje de fin de semana. El examinador hará el papel de tu amigo. Discutid juntos:</p>
+                    <ul class="list-disc list-inside text-sm ml-4">
+                        <li>A dónde ir (¿mare o montagna?).</li>
+                        <li>Cuándo salir y cuándo volver.</li>
+                        <li>Cómo ir (¿treno o macchina?).</li>
+                        <li>Qué hacer durante el fin de semana.</li>
+                    </ul>
+                    <p class="text-sm mt-4 italic">Intenta usar frases para hacer propuestas ("Potremmo andare..."), expresar preferencias ("Preferirei...") y estar de acuerdo o en desacuerdo ("Sono d'accordo", "Non sono d'accordo, perché...").</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. EXPRESIONES CULTURALES -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-bold text-[#005a2c] border-b-2 border-[#CD212A] pb-2 mb-6 uppercase">8. Expresiones Culturales 🇮🇹</h2>
+            <div class="bloco-cultural text-justify text-sm">
+                <h4 class="font-bold text-lg mb-2 text-[#005a2c]">La Formalità durante l'Esame</h4>
+                <p>Durante la prueba oral, recuerda que la situación es formal. Es fundamental tratar al examinador de <strong>"Lei"</strong> (usted). Usa expresiones educadas como "Scusi", "Per favore", "Grazie" y las formas de cortesía de los verbos, como el Condicional (<em>Vorrei, Potrebbe</em>). Evita la jerga o un lenguaje demasiado coloquial. Demostrar que sabes distinguir entre el registro formal e informal es una parte importante de la competencia lingüística en el nivel B1 y demuestra respeto por la cultura italiana.</p>
+            </div>
+        </section>
+
+        <!-- 10. RESUMEN -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-bold text-[#005a2c] border-b-2 border-[#CD212A] pb-2 mb-6 uppercase">10. Resumen de la Clase 📑</h2>
+            <ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
+                <li>Esta clase fue un <strong>simulacro completo</strong> de las cuatro partes del examen de ciudadanía B1: <strong>Ascolto, Lettura, Scrittura, Orale</strong>.</li>
+                <li>Repasamos y aplicamos de forma integrada todas las estructuras del <strong>nivel A1 y A2</strong>.</li>
+                <li>El objetivo fue familiarizarte con el <strong>formato del examen</strong> y probar tu capacidad para usar el idioma en contextos prácticos.</li>
+                <li>¡Felicidades por completar el Módulo 3! Estás muy cerca de lograr tu objetivo.</li>
+            </ul>
+        </section>
+
+        <!-- 11. DESAFÍO -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100 text-center">
+            <h2 class="text-2xl font-bold text-[#005a2c] border-b-2 border-[#CD212A] pb-2 mb-6 uppercase tracking-wider">11. Desafío de la Clase 🚀</h2>
+            <p class="text-gray-700 mb-6 leading-relaxed max-w-3xl mx-auto">
+                ¡El verdadero desafío es completar las tareas de escritura y orales de este simulacro! Coge papel y bolígrafo para las tareas escritas y usa la grabadora de tu móvil para la prueba oral. Intenta respetar los tiempos y el número de palabras. Es la mejor manera de probar tu preparación.
+            </p>
+            <div class="text-[#CD212A] font-bold text-3xl mb-2">¡In bocca al lupo per la tua preparazione!</div>
+        </section>
+
+        <!-- GABARITO FINAL -->
+        <section class="bg-gray-800 text-white p-8 rounded-xl shadow-lg border-t-4 border-[#3498db]">
+            <h2 class="text-xl font-bold text-[#3498db] mb-4 uppercase tracking-widest text-center md:text-left">Solucionario / Gabarito</h2>
+            <div class="gabarito-section text-gray-800 p-4 rounded-md">
+                <h4 class="font-bold mb-2">Sección 3: Prova di Ascolto</h4>
+                <p class="mb-4">Respuesta correcta: <strong>C</strong> (Delle bevande, come il prosecco e i succhi di frutta.)</p>
+                <h4 class="font-bold mb-2">Sección 4: Prova di Lettura</h4>
+                <ol class="list-decimal list-inside space-y-1">
+                    <li>Respuesta correcta: <strong>B</strong> (Chiedere informazioni e fissare un appuntamento per visitare un appartamento in affitto.)</li>
+                    <li>Respuesta correcta: <strong>B</strong> (Se è possibile avere un posto auto nel garage.)</li>
+                </ol>
+                <h4 class="font-bold mt-4 mb-2">Secciones 5 y 6 (Scrittura e Orale)</h4>
+                <p class="text-sm">Las respuestas para estas secciones son abiertas. Lo importante es intentar usar el vocabulario y las estructuras gramaticales aprendidas, respetando las instrucciones de cada tarea.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="max-w-6xl mx-auto mt-12 mb-10 text-center text-sm text-gray-500">
+        <a href="https://espaco-liberdade.github.io/ESP-ITA" class="inline-block bg-[#3498db] text-white px-10 py-4 rounded-full font-bold shadow-lg hover:bg-[#2980b9] transition-all transform hover:-translate-y-1 mb-4">
+            Volver al Menú Principal
+        </a>
+        <p>© 2024 Pasaporte Italiano - Clase 30</p>
+    </footer>
+
+    <!-- SCRIPT DE AUDIO -->
+    <script>
+        let voices = [];
+        function loadVoices() {
+            voices = speechSynthesis.getVoices();
+        }
+        if (speechSynthesis.onvoiceschanged !== undefined) {
+            speechSynthesis.onvoiceschanged = loadVoices;
+        }
+        loadVoices();
+
+        function playAudio(text) {
+            speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'it-IT';
+            utterance.rate = 0.85;
+
+            const voice =
+                voices.find(v => v.lang === 'it-IT' && !v.localService && /Google|Premium|Enhanced|Siri/i.test(v.name)) ||
+                voices.find(v => v.lang === 'it-IT') ||
+                voices.find(v => v.lang.startsWith('it'));
+
+            if (voice) utterance.voice = voice;
+            speechSynthesis.speak(utterance);
+        }
+    </script>
+</body>
+</html>
